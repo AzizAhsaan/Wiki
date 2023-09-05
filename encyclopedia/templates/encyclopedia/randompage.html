@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    
+<h1>randompage</h1>
+<form action="{% url 'randompage' %}" method="POST">
+    {% csrf_token %}
+    <h1>{{ content | safe }}</h1>
+</form>
+
+{% endblock %}
